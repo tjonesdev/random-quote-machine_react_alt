@@ -1,13 +1,228 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-width: 375px;
+  width: 100%;
+  min-height: 450px;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  cursor: default;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  transition: 0.9s;
+}
+.landing-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 3px;
+}
+.title i {
+  padding: 0;
+  margin: 0;
+  margin-right: 2px;
+  transform: scaleX(-1);
+  font-size: 1.5em;
+}
+.landing-btn {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  box-sizing: border-box;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1, 1) translateY(5px);
+  }
+
+  30% {
+    transform: scale(1, 0.8) translateY(10px);
+  }
+
+  75% {
+    transform: scale(1, 1.1) translateY(-20px);
+  }
+}
+.landing-btn:hover {
+  animation: bounce 1.5s infinite ease-in;
+}
+.landing-btn p {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+.landing-btn i {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 1em;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+.quote-container {
+  position: relative;
+  padding: 40px 70px;
+  box-sizing: border-box;
+}
+.quotation-mark {
+  font-family: "Cardo", serif;
+  font-size: 75px;
+  opacity: 0.5;
+  height: 40px;
+  line-height: 1;
+}
+.quot-left {
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+}
+.quot-right {
+  position: absolute;
+  bottom: 0.25em;
+  right: 0;
+}
+.author-container {
+  width: 100%;
+  margin-top: 1em;
+}
+p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.quote {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.author {
+  font-size: 1em;
+  font-weight: 300;
+}
+.btn {
+  border: none;
+  color: white;
+  border-radius: 3px 3px;
+  cursor: pointer;
+}
+.btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.btn:active {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.new-quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 20vh;
+}
+.new-quote {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background-color: white;
+  transition: color 0.9s;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  min-height: 100px;
+  height: 20vh;
+  max-height: 150px;
+  box-sizing: border-box;
+}
+.tweet-quote {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0.5em 0.65em;
+  font-weight: 300;
+  background-color: #1da1f2;
+  box-sizing: border-box;
+}
+.fab,
+i {
+  font-size: 1em;
+  margin-right: 0.5em;
+}
+.tweet-quote span {
+  font-size: 0.8em;
+}
+footer {
+  font-size: 0.7em;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  margin-bottom: 1em;
+  color: #000;
+}
+
+@media only screen and (min-width: 700px) {
+  body,
+  #root {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 4em;
+    letter-spacing: 5px;
+  }
 }
