@@ -1,5 +1,5 @@
 # Random Quote Machine (New Design)
-### Created: Jun 30, 2020 || Status: Complete || Technologies: HTML, CSS, JavaScript, React.js
+### Created: Jun 30, 2020 || Status: Complete || Technologies: HTML, CSS, JavaScript, Babel, React.js, Twitter API
 
 **Description:** An application that pulls from hand-picked quotes and randomly generates through them. Updated to newer design.
 
