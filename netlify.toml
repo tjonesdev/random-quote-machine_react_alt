@@ -1,0 +1,9 @@
+[build]
+publish = "build/"
+command = "CI='' npm run build"
+
+[[redirects]]
+from = "https://tjonesdev-quote.netlify.app"
+to = "https://quote.tjonesdev.com"
+status = 301
+force = true
